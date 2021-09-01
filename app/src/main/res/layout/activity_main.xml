@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    tools:context=".MainActivity"
+    >
+
+    <TextView
+        android:id="@+id/tvqoutify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+        android:text="QOUTIFY"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_marginTop="50dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/layoutlinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvqoutify"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/background"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rotation="180"
+            android:src="@drawable/quote" />
+
+        <TextView
+            android:id="@+id/quoteText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Genius is one percent inspiration and ninenty -nine percent perspiration"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/quoteAuthor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="abhi abhi shek"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutlinear"
+        android:layout_alignEnd="@+id/layoutlinear"
+        android:layout_marginTop="-25dp"
+        android:layout_marginRight="25dp"
+        android:backgroundTint="#6A6A6A"
+        android:onClick="onShare"
+        android:src="@drawable/ic_baseline_share_24" />
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_alignParentBottom="true">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PREVIOUS"
+        android:textColor="@color/white"
+        android:drawableStart="@drawable/back_arrow"
+        android:layout_weight="1"
+        android:onClick="onPrevious"
+        android:textSize="24dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NEXT"
+        android:textColor="@color/white"
+        android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
+        android:gravity="end"
+        android:onClick="onNext"
+        android:layout_weight="1"
+        android:textSize="24sp"/>
+</LinearLayout>
+
+
+</RelativeLayout>
