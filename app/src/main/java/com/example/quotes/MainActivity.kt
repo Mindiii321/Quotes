@@ -10,7 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 
 class MainActivity : AppCompatActivity() {
     lateinit var mainViewModel: MainViewModel
-
+    var hello:String ="jnmjh"
 
     private  val quoteText:TextView
       get() = findViewById(R.id.quoteText)
@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
     fun setQuote(quote: Quote){
         quoteText.text=quote.text
         quoteAuthor.text=quote.author
+
     }
     fun onPrevious(view: View) {
           setQuote(mainViewModel.previousQuote())
